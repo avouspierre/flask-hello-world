@@ -1,3 +1,7 @@
+import os
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 WTF_CSRF_ENABLED = True
 SECRET_KEY = 'Une-super-cle-introuvable'
 OPENID_PROVIDERS = [
@@ -6,3 +10,5 @@ OPENID_PROVIDERS = [
     {'name': 'AOL', 'url': 'http://openid.aol.com/<username>'},
     {'name': 'Flickr', 'url': 'http://www.flickr.com/<username>'},
     {'name': 'MyOpenID', 'url': 'https://www.myopenid.com'}]
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
+SQLALCHEMY_TRACK_MODIFICATIONS = True
