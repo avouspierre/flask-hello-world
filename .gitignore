@@ -108,3 +108,6 @@ pip-selfcheck.json
 
 #VScode
 .vscode/
+
+#secret
+instance/
